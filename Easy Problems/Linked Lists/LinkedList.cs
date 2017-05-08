@@ -18,10 +18,12 @@ public class LinkedListNode
 	public void SetNext(LinkedListNode n)
 	{
 		next = n;
+
 		if (this == last) 
 		{ 
 			last = n; 
 		}
+
 		if (n != null && n.prev != this)
 		{
 			n.SetPrevious(this);

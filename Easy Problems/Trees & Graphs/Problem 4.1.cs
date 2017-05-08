@@ -1,9 +1,5 @@
-<Query Kind="Program">
-  <Reference>&lt;RuntimeDirectory&gt;\System.dll</Reference>
-  <Namespace>System.Collections.Generic</Namespace>
-</Query>
-
-// Problem 4.1 - Route Between Nodes: Given a directed graph, design an algorithm to find out whether there is a route between two nodes. 
+// Problem 4.1
+// Route Between Nodes: Given a directed graph, design an algorithm to find out whether there is a route between two nodes. 
 
 void Main()
 {
@@ -40,7 +36,7 @@ public bool BFS<T>(Node<T> root, Node<T> endNode)
 	while (q.Any())
 	{
 		Node<T> r = q.Dequeue();
-		if(CheckNode(r, endNode)) { return true; };
+		if (CheckNode(r, endNode)) { return true; };
 		
 		foreach(Node<T> n in r.neighbors) 
 		{
