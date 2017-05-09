@@ -1,11 +1,10 @@
+/*
+	Problem 4.5: Validate BST: Implement a function to check if a binary tree is a binary search tree.
+				 NOTE: A binary search tree is a binary tree in which every node fits a specific ordering property: 
+				 all Left Descendents <= n < all Right Descendents.
+*/
 
-
-// Problem 4.5
-// Validate BST: Implement a function to check if a binary tree is a binary search tree. 
-
-// NOTE: A binary search tree is a binary tree in which every node fits a specific ordering property: all left descendents <= n < all right descendents.
-
-void Main()
+public void Main()
 {
 	
 }
@@ -15,16 +14,16 @@ public bool ValidateBST(Node<int> root)
 	return CheckBST(root, null, null);	
 }
 
-public bool CheckBST(Node<int> n, Int32? min, Int32? max)
+public bool CheckBST(Node<int> node, Int32? min, Int32? max)
 {
-	if (n == null) { return true; }
+	if (node == null) { return true; }
 	
-	if ((min != null && n.Data <= min) || (max != null && n.Data > max))
+	if ((min != null && node.Data <= min) || (max != null && node.Data > max))
 	{
 		return false;
 	}
 	
-	if (!CheckBST(n.Left, min, n.Data) || !CheckBST(n.Right, n.Data, max))
+	if (!CheckBST(node.Left, min, node.Data) || !CheckBST(node.Right, node.Data, max))
 	{
 		return false;
 	}
@@ -34,9 +33,9 @@ public bool CheckBST(Node<int> n, Int32? min, Int32? max)
 
 public class Node<T>
 {
-	public T Data;
-	public Node<T> Left;
-	public Node<T> Right;
+	public T Data { get; set; }
+	public Node<T> Left { get; set; }
+	public Node<T> Right { get; set; }
 	
 	public Node(T data)
 	{

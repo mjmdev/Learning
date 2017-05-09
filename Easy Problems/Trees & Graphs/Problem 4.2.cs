@@ -1,9 +1,9 @@
+/*
+	Problem 4.2: Minimal Tree: Given a sorted (increasing order) array with unique integer elements, write an algorithm to 
+				 create a binary search tree with minimal height. 
+*/
 
-
-// Problem 4.2 - Minimal Tree: Given a sorted (increasing order) array with unique integer elements, write an algorithm to 
-// create a binary search tree with minimal height. 
-
-void Main()
+public void Main()
 {
 	int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 	Node tree = CreateBST(array);
@@ -13,9 +13,9 @@ void Main()
 
 public class Node
 {
-	public int value;
-	public Node left;
-	public Node right;
+	public int value { get; set; }
+	public Node left { get; set; }
+	public Node right { get; set; }
 	
 	public Node(int value)
 	{

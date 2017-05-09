@@ -12,8 +12,6 @@ void Main()
         graph.NodeSet[6] = new List<int> {5};
 }
 
-
-
 public class Graph<T>
 {
 	public Dictionary<int, List<T>> NodeSet;
@@ -21,10 +19,10 @@ public class Graph<T>
 
 public class Node<T>
 {
-	public int id;
-	public T data;
-	public List<int> neighbors;
-	public bool visited;
+	public int id { get; set; }
+	public T data  { get; set; }
+	public List<int> neighbors  { get; set; }
+	public bool visited  { get; set; }
 }
 
 public bool BFS<T>(Node<T> root, Node<T> endNode)

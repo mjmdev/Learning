@@ -1,19 +1,18 @@
+/* 
+	Problem 4.4: Check Balanced: Implement a function to check if a binary tree is balanced. For the purposes of this question, 
+				 a balanced tree is defined to be a tree such that the heights of the two subtrees of any node never differ by more than one.
+*/
 
-
-// Problem 4.4
-// Check Balanced: Implement a function to check if a binary tree is balanced. For the purposes of this question, a balanced tree is defined 
-// to be a tree such that the heights of the two subtrees of any node never differ by more than one.
-
-void Main()
+public void Main()
 {
 	
 }
 
 public class Node<T>
 {
-	public T data;
-	public Node<T> left;
-	public Node<T> right;
+	public T data { get; set; }
+	public Node<T> left { get; set; }
+	public Node<T> right { get; set; }
 }
 
 // Approach 1 - Brute Force Recursion
@@ -62,7 +61,10 @@ public int CheckHeight<T>(Node<T> node)
 	if (rightHeight == Int32.MinValue) { return Int32.MinValue; }
 	
 	int heightDiff = leftHeight - rightHeight;
-	if (Math.Abs(heightDiff) > 1) { return Int32.MinValue; }
+	if (Math.Abs(heightDiff) > 1) 
+	{
+		return Int32.MinValue;
+	}
 	else
 	{
 		return Math.Max(leftHeight, rightHeight) + 1;

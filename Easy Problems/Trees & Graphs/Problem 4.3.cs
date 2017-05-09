@@ -1,10 +1,9 @@
+/* 
+	Problem 4.3: List of Depths: Given a binary tree, design an algorithm which creates a linked list of all the nodes at each depth 
+				 (e.g., if you have a tree with depth D, you'll have D linked lists). 
+*/
 
-
-// Problem 4.3
-// List of Depths: Given a binary tree, design an algorithm which creates a linked list of all the nodes at each depth 
-// (e.g., if you have a tree with depth D, you'll have D linked lists). 
-
-void Main()
+public void Main()
 {
 	int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 	Node tree = CreateBST(array);
@@ -34,8 +33,9 @@ public class Node
 // Approach 1 - Modified BFS
 public List<List<Node>> NodeListBFS(Node root)
 {
-	List<List<Node>> nodeList = new List<List<Node>>();
-	List<Node> levelList = new List<Node>();
+	var nodeList = new List<List<Node>>();
+	var levelList = new List<Node>();
+
 	if (root != null)
 	{
 		levelList.Add(root);
@@ -67,7 +67,7 @@ public List<List<Node>> NodeListBFS(Node root)
 // Approach 2 - Pre-Order Transversal
 public List<List<Node>> BuildList(Node root)
 {
-	List<List<Node>> lists = new List<List<Node>>();
+	var lists = new List<List<Node>>();
 	BuildList(root, lists, 0);
 	
 	return lists;
