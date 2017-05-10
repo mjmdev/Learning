@@ -130,12 +130,11 @@ public Node<int> BSTSearch(Node<int> root, int key)
 	return BSTSearch(root.Right, key);
 }
 
-
 public class Node<T> 
 {
-	public T Data;
-	public Node<T> Left;
-	public Node<T> Right;
+	public T Data { get; set; }
+	public Node<T> Left { get; set; }
+	public Node<T> Right { get; set; }
 	
 	public Node(T data)
 	{
