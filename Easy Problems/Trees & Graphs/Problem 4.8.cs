@@ -1,15 +1,7 @@
-
-
-// Problem 4.8
-// First Common Ancestor: Design an algorithm and write code to find the first common ancestor of two nodes in a binary tree. Avoid storing additional 
-// nodes in a data structure. NOTE: This is not necessarily a binary search tree. 
-
-void Main()
-{
-	
-}
-
-// Define other methods and classes here
+/*
+	Problem 4.8: First Common Ancestor: Design an algorithm and write code to find the first common ancestor of two nodes in a binary tree.
+				 Avoid storing additional nodes in a data structure. NOTE: This is not necessarily a binary search tree. 
+*/
 
 public Node<T> FindFirstCommonAncestor<T>(Node<T> node1, Node<T> node2)
 {
@@ -42,8 +34,6 @@ public int FindDepth<T>(Node<T> node)
 	return depth;
 }
 
-
-
 public Node<T> GoUpBy<T>(int delta, Node<T> node)
 {
 	while (delta > 0 && node != null)
@@ -57,7 +47,7 @@ public Node<T> GoUpBy<T>(int delta, Node<T> node)
 
 public class Node<T>
 {
-	public T data;
-	public Node<T> parent;
-	public List<Node<T>> children;
+	public T data { get; set; }
+	public Node<T> parent { get; set; }
+	public List<Node<T>> children { get; set; }
 }

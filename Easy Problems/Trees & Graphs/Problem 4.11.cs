@@ -1,15 +1,11 @@
+/*
+	Random Node:	You are implementing a binary tree class from scratch which, in addition to insert, find, and delete, 
+					has a method getRandomNode() which returns a random node from the tree. All nodes should be equally likely 
+					to be chosen. Design and implement an algorithm for getRandomNode, and explain how you would implement the rest
+					of the methods.
 
-
-// Problem 4.11
-// You are implementing a binary tree class from scratch which, in addition to insert, find, and delete, has a method getRandomNode() which returns 
-// a random node from the tree. All nodes should be equally likely to be chosen. Design and implement an algorithm for getRandomNode, and explain 
-// how you would implement the rest of the methods
-// REFERENCES: http://quiz.geeksforgeeks.org/binary-search-tree-set-2-delete/
-
-void Main()
-{
-	
-}
+	REFERENCE: http://quiz.geeksforgeeks.org/binary-search-tree-set-2-delete/
+ */
 
 public class BinarySearchTree
 {
@@ -135,9 +131,9 @@ public class BinarySearchTree
 
 public class Node<T>
 {
-	public T Data;
-	public Node<T> Left;
-	public Node<T> Right;
+	public T Data { get; set; }
+	public Node<T> { get; set; }
+	public Node<T> { get; set; }
 	
 	private int Size = 0;
 	
