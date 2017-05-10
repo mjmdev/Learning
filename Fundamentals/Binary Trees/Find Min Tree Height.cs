@@ -1,17 +1,12 @@
 // Binary Tree - Min Height
 // https://leetcode.com/problems/minimum-depth-of-binary-tree/#/description
 
-void Main()
-{
-	
-}
-
 public int FindMinHeight(Node<int> root)
 {
 	if (root == null) { return 0; }
 	int depth = 1;
 	
-	Queue<Node<int>> q = new Queue<Node<int>>();
+	var q = new Queue<Node<int>>();
 	q.Enqueue(root);
 	
 	while (q.Any())
@@ -28,4 +23,16 @@ public int FindMinHeight(Node<int> root)
 	}
 	
 	return depth;
+}
+
+public class Node<T>
+{
+	public T Data { get; set; }
+	public Node Left { get; set; }
+	public Node Right { get; set; }
+
+	public Node(T data)
+	{
+		this.Data = data;
+	}
 }
