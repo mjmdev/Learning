@@ -1,24 +1,9 @@
+/*
+	Fibonacci Recursive
+	Time Complexity: O(2^n)
+	Space Complexity: O(n) (call stack size)
+*/
 
-// Fibonacci Sequence
-
-void Main()
-{
-	int val = 40;
-	
-	int Fib = Fibonacci(val);
-	Console.WriteLine(Fib);
-	
-	int FibMemo = Fibonacci(val, true);
-	Console.WriteLine(FibMemo);
-}
-
-public int Fibonacci(int n, bool memotize = false)
-{
-	if (memotize) { return FibonacciMemo(n); }
-	else { return Fibonacci(n); }
-}
-
-// Fibonacci Sequence
 public int Fibonacci(int n)
 {
 	if (n < 0) { return -1; }
@@ -46,21 +31,46 @@ public int Fibonacci(int n, int[] memo)
 	return memo[n];
 }
 
-// Fibonacci Botton-Up
+/* 
+	Fibonacci Bottom-Up
+	Time Complexity: O(n)
+	Extra Space: O(n)
+ */
+
 public int FibonacciBottomUp(int n)
 {
-	if (n < 0) { return -1; }
-	if (n == 0) { return 0; }
-	if (n == 1) { return 1; }
+	if (n <= 1) { return n; }
 	
-	int[] memo = new int[n];
-	memo[0] = 0;
-	memo[1] = 1;
+	int[] fib = new int[n+1];
+	fib[0] = 0;
+	fib[1] = 1;
 	
-	for (int i = 0; i < n; i++)
+	for (int i = 2; i <= n; i++)
 	{
-		memo[i] = memo[i-1] + memo[i-2];
+		fib[i] = fib[i-1] + fib[i-2];
 	}
 	
-	return memo[n-1] + memo[n-2];
+	return fib[n];
+}
+
+/*
+	Space Optimized Fibonacci
+	Time Complexity O(n)
+	Space Complexity O(1)
+ */
+public int FibonacciSpaceOptimized(int n)
+{
+	if (n <= 1) { return n; }
+
+	int a = 0;
+	int b = 1;
+
+	int fib = 1;
+	for (int i = 2; i <= n; i++)
+	{
+		fib = a + b;
+		a = b;
+		b = c;
+	}
+	return fib;
 }
