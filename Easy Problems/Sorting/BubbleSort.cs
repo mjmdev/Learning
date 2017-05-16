@@ -1,5 +1,3 @@
-
-
 // Bubble Sort: O(n^2) runtime, O(1) Memory
 
 // Start at the beginning of the array and swap the first two elements if the first is greater than the second. 

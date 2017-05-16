@@ -1,8 +1,10 @@
-
-
-// Merge Sort: 0(n log(n)) Runtime, O(n) Space Complexity
-// Merge sort divides the array in half, sorts each of those halves, and then merges them back together. 
-// Each of those halves has the same sorting algorithm applied to it. Eventually, you are merging just two singleelement arrays. 
+/*
+	Merge Sort: 0(n log(n)) Runtime
+				O(n) Space Complexity
+	
+	Merge sort divides the array in half, sorts each of those halves, and then merges them back together. 
+	Each of those halves has the same sorting algorithm applied to it. Eventually, you are merging just two single element arrays. 
+ */
 
 void Main()
 {
