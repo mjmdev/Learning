@@ -29,7 +29,7 @@ public void QuickSort(int[] array, int left, int right)
 	{
 		QuickSort(array, left, index - 1);
 	}
-	if (index < right)
+	if (right > index)
 	{
 		QuickSort(array, index, right);
 	}

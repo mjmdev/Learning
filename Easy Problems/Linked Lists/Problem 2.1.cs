@@ -1,23 +1,7 @@
-// Problem 2.1
-// Remove Dups: Write code to remove duplicates from an unsorted linked list. 
-// FOLLOW UP How would you solve this problem if a temporary buffer is not allowed? 
-
-void Main()
-{
-	LinkedListNode<int> root = new LinkedListNode<int>(1);
-	root.AppendToTail(2);
-	root.AppendToTail(2);
-	root.AppendToTail(3);
-	root.AppendToTail(4);
-	root.AppendToTail(2);
-	root.AppendToTail(7);
-	root.AppendToTail(7);
-	
-//	RemoveDuplicates(root);
-RemoveDups(root);
-	
-	Console.WriteLine(root);
-}
+/*
+	Remove Dups: Write code to remove duplicates from an unsorted linked list. 
+				 FOLLOW UP - How would you solve this problem if a temporary buffer is not allowed? 
+*/
 
 // Approach 1 - Dictionary/Hashtable
 public void RemoveDuplicates<T>(LinkedListNode<T> root)
